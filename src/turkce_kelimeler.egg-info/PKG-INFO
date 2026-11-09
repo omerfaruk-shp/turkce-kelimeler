@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: turkce-kelimeler
+Version: 0.1.0
+Summary: Türkçe kelime listesi ve dil işleme yardımcıları (hecele, ek getirme, İ/ı dönüşümü)
+License: MIT
+Keywords: turkish,türkçe,nlp,words
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Turkish
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# turkcekit
+
+Türkçe kelime listesi ve dil işleme yardımcıları.
+
+```python
+from turkcekit import kucult, hecele, ek_getir, rastgele, sirala
+
+kucult("IŞIK")            # 'ışık'
+hecele("kütüphane")       # ['kü', 'tüp', 'ha', 'ne']
+ek_getir("kitap", "de")   # 'kitapta'
+ek_getir("kitap", "i", yumusama=True)  # 'kitabı'
+rastgele(uzunluk=5)       # rastgele 5 harfli kelime
+sirala(["çay", "cam", "ılık", "iyi"])  # Türkçe alfabe sırası
+```
+
+## Sınırlamalar
+- Ek getirme kural tabanlıdır; yabancı kökenli kelimelerde (saat, harf, kalp) ve
+  ünsüz yumuşaması istisnalarında hata yapabilir.
+- Kelime listesi başlangıç aşamasındadır.
+
+## Kurulum (geliştirme)
+```
+pip install -e .
+pytest
+```

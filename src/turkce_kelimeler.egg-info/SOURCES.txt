@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/turkce_kelimeler.egg-info/PKG-INFO
+src/turkce_kelimeler.egg-info/SOURCES.txt
+src/turkce_kelimeler.egg-info/dependency_links.txt
+src/turkce_kelimeler.egg-info/top_level.txt
+src/turkcekit/__init__.py
+src/turkcekit/ek.py
+src/turkcekit/harf.py
+src/turkcekit/ses.py
+src/turkcekit/sozluk.py
+src/turkcekit/data/kelimeler.txt
+tests/test_turkce.py
